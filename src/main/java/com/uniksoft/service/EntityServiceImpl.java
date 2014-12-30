@@ -8,37 +8,38 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.uniksoft.dao.EntityDAO;
 
+/**
+ * 
+ * @author plasante
+ *
+ * @param <T>
+ */
 @Service
-public class EntityServiceImpl<T> implements EntityService<T> {
+public class EntityServiceImpl<T> {
 
 	@Autowired
 	private EntityDAO<T> entityDAO;
 
-	@Override
 	@Transactional
 	public void addEntity(T entity) {
 		entityDAO.addEntity(entity);
 	}
 
-	@Override
 	@Transactional
 	public void updateEntity(T entity) {
 		entityDAO.updateEntity(entity);
 	}
 
-	@Override
 	@Transactional
 	public List<T> listEntities(Class<T> entity) {
 		return entityDAO.listEntities(entity);
 	}
 
-	@Override
 	@Transactional
 	public T getEntityById(Class<T> entity, Integer entityId) {
 		return entityDAO.getEntityById(entity, entityId);
 	}
 
-	@Override
 	@Transactional
 	public void removeEntity(Class<T> entity, Integer entityId) {
 		entityDAO.removeEntity(entity, entityId);

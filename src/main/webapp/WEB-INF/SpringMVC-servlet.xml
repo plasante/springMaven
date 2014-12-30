@@ -56,7 +56,9 @@
 
 	<tx:annotation-driven transaction-manager="transactionManager" />
 
+<!-- <bean id="entityService" class="com.uniksoft.service.EntityServiceImpl" /> -->
+    
 	<!-- This bean will populate the database at startup for development -->
-<!-- <bean id="seed" class="com.uniksoft.utils.Seed" /> -->
+    <bean id="seed" class="com.uniksoft.utils.Seed" />
 
 </beans>

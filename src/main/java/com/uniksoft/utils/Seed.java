@@ -14,15 +14,11 @@ import com.uniksoft.service.EntityServiceImpl;
 public class Seed {
 
 	/**
-	 * This will be instantiated first
+	 * EntityService will be injected by Spring
 	 */
 	@SuppressWarnings("rawtypes")
 	@Autowired
 	private EntityServiceImpl entityService;
-	
-	public void setEntityService(EntityServiceImpl entityService) {
-		this.entityService = entityService;
-	}
 	
 	@PostConstruct
 	public void init() {
