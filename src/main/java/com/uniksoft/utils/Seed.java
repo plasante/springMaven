@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.uniksoft.form.Privilege;
 import com.uniksoft.form.Role;
-import com.uniksoft.service.EntityServiceImpl;
+import com.uniksoft.service.EntityFacade;
 
 public class Seed {
 
@@ -18,7 +18,7 @@ public class Seed {
 	 */
 	@SuppressWarnings("rawtypes")
 	@Autowired
-	private EntityServiceImpl entityService;
+	private EntityFacade entityService;
 	
 	@PostConstruct
 	public void init() {

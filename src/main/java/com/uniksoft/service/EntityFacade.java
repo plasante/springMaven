@@ -15,7 +15,7 @@ import com.uniksoft.dao.EntityDAO;
  * @param <T>
  */
 @Service
-public class EntityServiceImpl<T> {
+public class EntityFacade<T> {
 
 	@Autowired
 	private EntityDAO<T> entityDAO;
